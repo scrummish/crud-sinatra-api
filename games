@@ -1,0 +1,103 @@
+\l
+CREATE DATABASE
+CREATE DATABASE classroom;
+CREATE DATABASE classroom;
+\l
+\c classroom
+\dt
+CREATE TABLE students(id SERIAL PRIMARY KEY, name varchar(255), email varchar(255))
+CREATE TABLE students(id SERIAL PRIMARY KEY, name varchar(255), email varchar(255));
+CREATE TABLE students(id SERIAL PRIMARY KEY, name varchar(255), email varchar(255));
+\dt
+SELECT * FROM students
+;
+INSERT INTO students(name, email) VALUES('people','people.com');
+SELECT * FROM students
+;
+INSERT INTO students(name, email) VALUES('sierra','sierra.com');
+INSERT INTO students(name, email) VALUES('ryne','ryne.com');
+SELECT * FROM students
+;
+SELECT FROM students WHERE id = 2;
+DELETE FROM students WHERE id=1;
+SELECT * FROM students
+;
+\q
+DROP DATABASE item;
+\l
+CREATE DATABASE item;
+\c item
+CREATE TABLE users(
+  id SERIAL PRIMARY KEY,
+  username VARCHAR(32),
+  password VARCHAR(60)
+);
+CREATE TABLE items(
+  id SERIAL PRIMARY KEY,
+  title VARCHAR(255),
+  user_id INT REFERENCES users(id)
+);\d users
+\d items
+\d items
+\d items
+\dt
+\c item;
+SELECT * FROM items;
+drop database item;
+CREATE DATABASE item;
+\c item
+CREATE TABLE users(
+  id SERIAL PRIMARY KEY,
+  username VARCHAR(32),
+  password VARCHAR(60)
+);
+CREATE TABLE items(
+  id SERIAL PRIMARY KEY,
+  title VARCHAR(255),
+  user_id INT REFERENCES users(id)
+);\d users
+SELECT * FROM users;
+INSERT INTO users (username, password) VALUES ('reuben', '12345');
+drop database item;
+CREATE DATABASE item;
+\c item
+CREATE TABLE users(
+  id SERIAL PRIMARY KEY,
+  username VARCHAR(32),
+  password VARCHAR(60)
+);
+CREATE TABLE items(
+  id SERIAL PRIMARY KEY,
+  title VARCHAR(255),
+  user_id INT REFERENCES users(id)
+);
+drop database item;
+drop database item;
+CREATE DATABASE item;
+\c item
+CREATE TABLE users(
+  id SERIAL PRIMARY KEY,
+  username VARCHAR(32),
+  password_digest VARCHAR(60)
+);
+drop database item;
+CREATE DATABASE item;
+\c item
+CREATE TABLE users(
+  id SERIAL PRIMARY KEY,
+  username VARCHAR(32),
+  password_digest VARCHAR(60)
+);
+drop database item;
+CREATE DATABASE videogame;
+\c videogame
+CREATE TABLE games(
+  id SERIAL PRIMARY KEY,
+  title VARCHAR(255),
+  developer VARCHAR(255),
+  genre VARCHAR(60)
+);\d games
+SELECT * FROM games
+SELECT * FROM games
+SELECT * FROM games;
+\s games
